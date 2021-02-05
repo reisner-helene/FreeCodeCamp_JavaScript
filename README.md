@@ -1,1 +1,1 @@
-# FreeCodeCamp_JS_sumAll
+# FreeCodeCamp JavaScript challenges
