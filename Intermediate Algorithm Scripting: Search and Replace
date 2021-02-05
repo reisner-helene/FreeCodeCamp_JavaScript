@@ -1,0 +1,62 @@
+function myReplace(str, before, after) {
+
+  let findBefore = before;
+  let foundBefore = str.match(findBefore);
+  let index = str.indexOf(foundBefore); 
+  //console.log(foundBefore);
+  console.log(index + " <= index");
+
+  function isLowerCase(str){
+    return str == str.toLowerCase() && str != str.toUpperCase();
+  }
+
+  var targetIsCapitalised = isLowerCase(str[index]);
+  console.log(targetIsCapitalised + " <= target is capitalised!");
+  
+  let workOnThis = after[0];
+  console.log(workOnThis + "    <- check if target is capitalised");
+
+  function capitalise(letter){
+     if (targetIsCapitalised != true){
+       let newWord = letter.toUpperCase();
+       console.log("here!");
+       console.log(newWord);
+       return newWord;
+      }
+  }
+
+  if (targetIsCapitalised != true){
+   var capitalisedLetter = capitalise(workOnThis);
+   console.log(capitalisedLetter  + " <= capitalisedLetter");
+   var after = capitalisedLetter + after.slice(1);
+   console.log(after + " <= capitalisedWord");
+  }
+
+  //Is "before" capitalised?
+    function isLowerCase(before){
+    return before == before.toLowerCase() && str != before.toUpperCase();
+  }
+  console.log(before[0] + "   <= check if source word is capitalised ");
+
+  var sourceIsLowerCase = isLowerCase(before[0]);
+  console.log(sourceIsLowerCase + " <= source word is lower case")
+
+function makeSmaller(word){
+    if (sourceIsLowerCase != false && targetIsCapitalised != false){ 
+    let word1 = word.toLowerCase();
+    console.log("here too!")
+    return word1;
+    }
+  }
+
+  let newAfter = makeSmaller(after);
+  console.log(newAfter+ " <= newAfter");
+
+  var result = str.replace(before, newAfter)
+  console.log(result);
+
+  return str;
+
+}
+
+myReplace("I think we should look up there", "up", "Down") //Output: I think we should look down there
