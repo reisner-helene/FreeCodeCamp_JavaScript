@@ -1,4 +1,4 @@
-function myReplace(str, before, after) {
+function myReplace(str, before, after) { 
 
   let findBefore = before;
   let foundBefore = str.match(findBefore);
