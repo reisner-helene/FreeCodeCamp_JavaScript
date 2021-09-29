@@ -1,6 +1,6 @@
 function myReplace(str, before,  after) {  
 
-  //let findBefore = before;
+  let findBefore = before;
   let foundBefore = str.match(findBefore);
   let index = str.indexOf(foundBefore); 
   //console.log(foundBefore);
